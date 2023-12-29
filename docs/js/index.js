@@ -31,7 +31,7 @@ const navtoggler=document.getElementById('nav-toggler');
 const navdrop=document.getElementById('nav-drop');
 
 const navItems=`
-<li onclick="toggle()"><a href="./Home.html">Home</a></li>
+<li onclick="toggle()"><a href="./index.html">Home</a></li>
 <li onclick="toggle()"><a href="./AboutMe.html">About</a></li>
 <li onclick="toggle()"><a href="./Projects.html">Projects</a></li>
 <li onclick="toggle()"><a href="./Services.html">Services</a></li>
