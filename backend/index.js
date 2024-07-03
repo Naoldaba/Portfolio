@@ -1,4 +1,4 @@
-import express from 'express';
+import express, { response } from 'express';
 import cors from 'cors';
 import nodemailer from 'nodemailer';
 import dotenv from 'dotenv';
@@ -10,6 +10,10 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded());
 app.use(cors());
+
+app.get('/', async (req, res)=>{
+    res.status(200).send("Welcome");
+})
 
 app.post('/formdata',  async (req, res)=>{
     const {name, email, message} = req.body;

@@ -60,7 +60,7 @@ function submitForm(e){
         message
     }   
 
-    fetch('http://localhost:5000/formdata', {
+    fetch('https://portfolio-server-one-coral.vercel.app/formdata', {
         method:'POST',
         headers:{
             'Content-Type': "Application/json"
