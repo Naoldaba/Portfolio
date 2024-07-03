@@ -45,3 +45,36 @@ function toggle() {
 }
 
 navtoggler.addEventListener('click', toggle)
+
+
+function submitForm(e){
+
+    e.preventDefault();
+    const name = document.getElementById('client_name').value;
+    const email = document.getElementById('client_email').value;
+    const message = document.getElementById('client_message').value;
+
+    const formData={
+        name,
+        email,
+        message
+    }   
+
+    fetch('http://localhost:5000/formdata', {
+        method:'POST',
+        headers:{
+            'Content-Type': "Application/json"
+        },
+        body: JSON.stringify(formData)
+    }).then((response)=>response.json())
+    .then((data)=>{
+        alert('Message successfully sent');
+        document.getElementById('contactForm').reset();
+    })
+    .catch(err=>{
+        console.log('error occured while trying to send message')
+        alert("Error while sending Message pls try again later");
+    })
+}
+
+document.getElementById('contactForm').addEventListener('submit', submitForm)
