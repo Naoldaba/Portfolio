@@ -367,10 +367,11 @@ a{
 .skills-expertise, .hobbies-interests{
     width: 90%;
     & h2{
-        padding: 0px 20px;
+        padding: 0px 60px;
         font-size: 30px;
     }
     & ul{
+        padding-left: 140px;
         font-size: 20px;
     }
 }
@@ -378,8 +379,12 @@ a{
     width: 100%;
     & h2{
         font-size: 30px;
-        padding: 0px 20px;
+        padding: 0px 60px;
     }
+}
+
+.about-container{
+    overflow: hidden;
 }
 
 
@@ -400,11 +405,16 @@ a{
 .gallery-item {
     overflow: hidden;
     border-radius: 8px;
+    height: 500px; 
+    display: flex; 
+    align-items: center;
+    justify-content: center;
 }
 
 .gallery-item img {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover; 
     display: block;
     transition: transform 0.3s ease;
 }
@@ -496,7 +506,7 @@ a{
 .call-to-action{
     font-size: 1.2rem;
     width: 80%;
-    padding: 0 30px;
+    padding: 0 100px;
     /* margin-left: 150px; */
     margin-bottom: 70px;
 }
@@ -716,7 +726,8 @@ button{
 /* For Laptop Computer and bigger screens*/
 @media (min-width: 768px){
     .gallery{
-        grid-template-columns: repeat(2, minmax(200px, 1fr));
+        grid-template-columns: repeat(2, minmax(200px, 40%));
+        justify-content: center;
     }
     #about-intro{
         width: 70%;
